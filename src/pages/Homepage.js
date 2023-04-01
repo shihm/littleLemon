@@ -1,10 +1,14 @@
 import CallToAction from "../components/CallToAction"
 import Specials from "../components/Specials"
-function Homepage(){
+import Chicago from "../components/Chicago"
+import CustomersSay from "../components/CustomersSay"
+function Homepage() {
     return (
         <>
-        <CallToAction />
-        <Specials />
+            <CallToAction />
+            <Specials id='Specials' />
+            <CustomersSay id='CustomersSay' />
+            <Chicago id='Chicago' />
         </>
     )
 }

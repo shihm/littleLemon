@@ -1,4 +1,8 @@
-function Chicago(){
-    return <h1>Chicago</h1>
+function Chicago() {
+    return (
+        <div id='About'>
+            Chicago
+        </div>
+    )
 }
 export default Chicago
