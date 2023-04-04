@@ -1,19 +1,23 @@
 import React , { useState } from 'react';
 
 function BookingForm(props) {
+  const [date, setDate] = useState(new Date());
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('Birthday');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Reservation submitted:', { time, guests, occasion });
+    console.log('Reservation submitted:', { date,time, guests, occasion });
   };
-
+  function dateChanged(event) {
+    setDate(event.target.value);
+    props.setDate(event.target.value);
+  }
   return (
     <form onSubmit={handleSubmit} style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
       <label htmlFor="res-date">Choose date</label>
-      <input type="date" id="res-date" onChange={(event)=>props.setDate(event.target.value)} />
+      <input type="date" id="res-date" onChange={(event)=>dateChanged(event)} />
       <label htmlFor="res-time">Choose time</label>
       <select id="res-time" value={time} onChange={(event) => setTime(event.target.value)}>
         {props.availableTimes.map((timeOption) => (

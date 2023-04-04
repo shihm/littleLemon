@@ -22,7 +22,7 @@ function Specials() {
         { name: 'Lemon Dessert', picture: lemonDessert, desc: 'A traditional Greek salad consists of sliced cucumbers, tomatoes, green bell pepper, red onion, olives, and feta cheese.', price: 5.00 }
     ]
     let Dishes = DishData.map(item => {
-        return <Dish name={item.name} picture={item.picture} desc={item.desc} price={item.price} />
+        return <Dish name={item.name} key={item.name} picture={item.picture} desc={item.desc} price={item.price} />
     })
     return (
         <div className='container specials' id='Menu'>
