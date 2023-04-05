@@ -1,6 +1,7 @@
+
 function Nav(){
     return (
-        <ul>
+        <ul aria-label="Main Navigation">
             <li><a href="/">Home</a></li>
             <li><a href="#About">About</a></li>
             <li><a href="#Menu">Menu</a></li>
