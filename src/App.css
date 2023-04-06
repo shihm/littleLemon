@@ -9,23 +9,24 @@
   }
 }
 
-.hero{
-  background-color: #495e57;
-  height: 400px;
+.headbar{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 120px;
 }
-@media (max-width: 600px){
-  .hero{
-    height: 675px;
-  }
-}
-.hero img{
-  width: 325px;
-  height: 375px;
-  margin: 40px auto;
+.homebtn{
+  height: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  background-color: #f4ce14;
+  color: #333;
   border-radius: 16px;
+  padding: 0 1rem;
 }
-.dish img{
-  width: 250px;
-  height: 250px;
-  border-radius: 16px;
+
+.homebtn a{
+  text-decoration: none;
+  color: #333;
 }
+

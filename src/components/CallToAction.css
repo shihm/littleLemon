@@ -1,0 +1,46 @@
+.hero {
+    justify-content: space-around;
+}
+.hero-bg{
+    background-color: #495e57;
+    width: 100%;
+    height: 300px;
+    display: block;
+    position: absolute;
+    top:120px;
+    z-index: -1;
+}
+@media (max-width: 600px) {
+    .hero {
+        align-items: center;
+    }
+    .hero-bg{
+        height: 600px;
+    }
+}
+
+.hero-text {
+    width: 330px;
+}
+
+.hero img {
+    width: 325px;
+    height: 375px;
+    margin: 40px auto;
+    border-radius: 16px;
+}
+.hero h1{
+    color:#f4ce14;
+    font-family: 'Markazi Text';
+    font-size: 2rem;
+}
+.hero h2{
+    color:white;
+    font-family: 'Markazi Text';
+    font-size: 1.25rem;
+}
+.hero p{
+    color:white;
+    font-family: 'Karla';
+    font-size: 1rem;
+}

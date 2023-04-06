@@ -1,0 +1,56 @@
+.specialTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:70%;
+    margin: 0 auto;
+}
+.specialTitle h2{
+    font-family: 'Markazi Text';
+    font-size: 2rem;
+    color: #333;
+}
+.specials{
+    width:70%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.dish{
+    width: 30%;
+    background: #edefee;
+    border-radius: 16px;
+    margin-top: 20px;
+}
+@media (max-width: 600px){
+    .dish{
+        width:100%;
+    }
+}
+.dish img{
+    width: 100%;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+}
+.dishTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.dishTitle h3{
+    font-family: 'Markazi Text';
+    font-size: 1rem;
+    color: #333;
+}
+.dishTitle div{
+    font-family: 'Markazi Text';
+    font-size: 1rem;
+    color: #ee9972;
+}
+.dish p{
+    font-family: 'Markazi Text';
+    font-size: 1rem;
+    color: #333;
+    width: 70%;
+    margin: 0 auto 10px auto;
+}

@@ -8,8 +8,10 @@ import './App.css';
 function App() {
   return (
     <>
-      <Header />
-      <Nav />
+      <div className='headbar'>
+        <Header />
+        <Nav />
+      </div>
       <BrowserRouter><Main /></BrowserRouter>
       <Footer />
     </>

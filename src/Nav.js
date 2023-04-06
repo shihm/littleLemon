@@ -1,14 +1,27 @@
+import { useState } from 'react';
+import './Nav.css';
+import menuIcon from './assets/icons_assets/🦆 icon _hamburger menu.svg';
 
-function Nav(){
+function Nav() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
-        <ul aria-label="Main Navigation">
-            <li><a href="/">Home</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Menu">Menu</a></li>
-            <li><a href="/booking">Reservations</a></li>
-            <li><a href="/constructing">Order online</a></li>
-            <li><a href="/constructing">Login</a></li>
-        </ul>
-    )
+        <nav aria-label="Main Navigation">
+            <img src={menuIcon} alt='Menu' className='menu-icon' onClick={toggleMenu} />
+            <ul className={isMenuOpen ? "" : "menu-toggle"}>
+                <li><a href="/">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="/booking">Reservations</a></li>
+                <li><a href="/constructing">Order</a></li>
+                <li><a href="/constructing">Login</a></li>
+            </ul>
+        </nav>
+    );
 }
-export default Nav
+
+export default Nav;
