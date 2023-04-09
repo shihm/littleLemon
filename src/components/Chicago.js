@@ -1,8 +1,8 @@
 function Chicago() {
     return (
-        <div id='About'>
+        <h1>
             Chicago
-        </div>
+        </h1>
     )
 }
 export default Chicago
