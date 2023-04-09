@@ -8,22 +8,22 @@ import { fetchAPI, submitAPI } from './api.js';
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 
+function initializeTimes() {
+    const today = new Date();
+    return { date: today, times: fetchAPI(today) };
+}
+function updateTimes(state, action) {
+    switch (action.type) {
+        case 'SET_DATE':
+            return { date: state.date, times: fetchAPI(state.date) };
+        default:
+            return initializeTimes();
+    }
+}
 
 function Main() {
     const [state, dispatch] = useReducer(updateTimes, initializeTimes());
     const navigate = useNavigate();
-    function initializeTimes() {
-        const today = new Date();
-        return { date: today, times: fetchAPI(today) };
-    }
-    function updateTimes(state, action) {
-        switch (action.type) {
-            case 'SET_DATE':
-                return { date: state.date, times: fetchAPI(state.date) };
-            default:
-                return initializeTimes();
-        }
-    }
     function submitForm(formData) {
         if (submitAPI(formData)) {
             navigate('/confirm', { state: { formData } });
@@ -59,4 +59,5 @@ function Main() {
 
     )
 }
-export default Main
+export { updateTimes, initializeTimes}
+export default Main;

@@ -1,4 +1,6 @@
 import React , { useState } from 'react';
+import '../App.css';
+import './BookingForm.css';
 
 function BookingForm(props) {
   const [date, setDate] = useState(new Date());
@@ -34,6 +36,7 @@ function BookingForm(props) {
     }
   }
   return (
+    <div className='booking'>
     <form
       onSubmit={handleSubmit}
       style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}
@@ -81,10 +84,12 @@ function BookingForm(props) {
       <input
         type="submit"
         value="Book Now"
+        className='homebtn'
         disabled={submitDisabled}
         aria-label="Submit booking form"
       />
     </form>
+    </div>
   );
 }
 

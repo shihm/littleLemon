@@ -14,8 +14,8 @@ function Nav() {
             <img src={menuIcon} alt='Menu' className='menu-icon' onClick={toggleMenu} />
             <ul className={isMenuOpen ? "" : "menu-toggle"}>
                 <li><a href="/">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Menu">Menu</a></li>
+                <li><a href="/constructing">About</a></li>
+                <li><a href="/constructing">Menu</a></li>
                 <li><a href="/booking">Reservations</a></li>
                 <li><a href="/constructing">Order</a></li>
                 <li><a href="/constructing">Login</a></li>
